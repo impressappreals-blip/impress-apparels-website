@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Impress Apparels Admin</title>
+<style>body{font-family:Arial;margin:0;background:#fff8fb;color:#222}header{background:#21152a;color:white;padding:20px}.wrap{max-width:850px;margin:auto;padding:20px}.box{background:white;padding:22px;margin:20px 0;border-radius:16px;box-shadow:0 5px 20px #0001}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{font-weight:bold}input,textarea{width:100%;padding:11px;margin-top:6px;border:1px solid #ddd;border-radius:9px;box-sizing:border-box}button,a{display:inline-block;margin-top:12px;padding:11px 17px;border:0;border-radius:22px;background:#6b2b58;color:white;text-decoration:none;font-weight:bold;cursor:pointer}.item{display:flex;gap:12px;align-items:center;border:1px solid #eee;padding:12px;margin:10px 0;border-radius:12px}.item img{width:80px;height:80px;object-fit:cover;border-radius:8px}.danger{background:#a00000}@media(max-width:650px){.grid{grid-template-columns:1fr}}</style></head>
+<body><header><div class="wrap"><h1>👑 Impress Apparels</h1><p>Product Management — temporary local version</p></div></header>
+<main class="wrap"><div class="box" style="background:#fff8e9;border-left:4px solid #d7a94b"><b>Note:</b> This admin page currently saves products only in this browser. Supabase online storage has not yet been connected.</div><div class="box"><h2>➕ Add New Product</h2><form id="f"><div class="grid">
+<div><label>Product Name *</label><input id="n" required></div><div><label>Price (₦) *</label><input id="p" type="number" min="0" required></div>
+<div><label>Available Sizes</label><input id="s" placeholder="8, 10, 14, 16"></div><div><label>Product Photo</label><input id="i" type="file" accept="image/*"></div>
+<div style="grid-column:1/-1"><label>Description</label><textarea id="d" rows="3"></textarea></div></div>
+<button type="submit">💾 Save Product</button> <a href="index.html">← Website</a></form></div>
+<div class="box"><h2>📦 Added Products</h2><div id="list"></div></div></main>
+<script>
+const K="impressProducts",get=()=>JSON.parse(localStorage.getItem(K)||"[]"),put=x=>{localStorage.setItem(K,JSON.stringify(x));render()};
+const esc=x=>String(x||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function render(){let a=get(),l=document.getElementById("list");l.innerHTML=a.length?a.map((x,j)=>`<div class="item">${x.img?`<img src="${x.img}">`:""}<div style="flex:1"><b>${esc(x.n)}</b><br>₦${Number(x.p).toLocaleString("en-NG")}<br>Sizes: ${esc(x.s)}</div><button class="danger" onclick="del(${j})">Delete</button></div>`).join(""):"<p>No products added yet.</p>"}
+function del(j){let a=get();a.splice(j,1);put(a)}
+f.onsubmit=e=>{e.preventDefault();let file=i.files[0],done=img=>{let a=get();a.push({n:n.value.trim(),p:Number(p.value),s:s.value.trim(),d:d.value.trim(),img});put(a);f.reset();alert("Product saved on this device.")};if(file){let r=new FileReader;r.onload=()=>done(r.result);r.readAsDataURL(file)}else done("")};render();
+</script></body></html>

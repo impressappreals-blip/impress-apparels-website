@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impress Apparels | Your Style, Our Passion</title>
+<meta name="description" content="Shop beautiful, elegant and uniquely designed outfits from Impress Apparels.">
+<style>
+  :root {
+    --pink:#e85aa7;
+    --gold:#d9b45a;
+    --dark:#111;
+    --cream:#fffaf7;
+    --text:#292929;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Arial,Helvetica,sans-serif; color:var(--text); background:var(--cream); line-height:1.6; }
+  header { background:#111; color:#fff; position:sticky; top:0; z-index:10; box-shadow:0 2px 12px #0002; }
+  .nav { max-width:1150px; margin:auto; padding:10px 20px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+  .nav img { width:92px; height:92px; object-fit:contain; }
+  nav a { color:#fff; text-decoration:none; margin-left:18px; font-weight:600; }
+  .hero { background:linear-gradient(135deg,#111 0%,#241522 60%,#5b2143 100%); color:white; padding:70px 20px; }
+  .hero-inner { max-width:1150px; margin:auto; display:grid; grid-template-columns:1.2fr .8fr; align-items:center; gap:35px; }
+  .hero h1 { font-family:Georgia,serif; font-size:clamp(40px,6vw,70px); line-height:1.05; margin:10px 0; }
+  .hero h1 span { color:#f28cc2; }
+  .hero p { font-size:18px; max-width:700px; }
+  .btn { display:inline-block; background:var(--pink); color:white; text-decoration:none; padding:13px 22px; border-radius:30px; font-weight:700; margin-top:12px; }
+  .btn.gold { background:var(--gold); color:#111; }
+  .hero-logo { width:100%; max-width:390px; margin:auto; display:block; }
+  section { max-width:1150px; margin:auto; padding:60px 20px; }
+  .section-title { text-align:center; font-family:Georgia,serif; font-size:36px; margin:0 0 10px; }
+  .section-subtitle { text-align:center; margin:0 auto 35px; max-width:700px; color:#666; }
+  .benefits { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; }
+  .benefit { background:white; padding:24px; border-radius:18px; box-shadow:0 5px 20px #0000000b; text-align:center; }
+  .benefit b { display:block; margin-bottom:7px; }
+  .products { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .product-card { background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 25px #00000012; }
+  .product-card img { width:100%; height:420px; object-fit:cover; display:block; }
+  .product-info { padding:20px; }
+  .product-info h3 { margin:0 0 6px; font-family:Georgia,serif; font-size:23px; }
+  .price { color:#a05b80; font-weight:700; }
+  .small { padding:10px 16px; }
+  .about { background:#111; color:#fff; max-width:none; }
+  .about-inner { max-width:850px; margin:auto; text-align:center; }
+  .contact { text-align:center; }
+  footer { background:#111; color:#fff; text-align:center; padding:30px 20px; }
+  .wa { position:fixed; right:18px; bottom:18px; width:60px; height:60px; border-radius:50%; background:#25d366; color:white; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:27px; box-shadow:0 5px 18px #0003; z-index:20; }
+  @media (max-width:800px) {
+    .hero-inner { grid-template-columns:1fr; text-align:center; }
+    .hero p { margin-left:auto; margin-right:auto; }
+    .benefits { grid-template-columns:1fr 1fr; }
+    .products { grid-template-columns:1fr; max-width:500px; margin:auto; }
+    .product-card img { height:500px; }
+    nav a { margin-left:8px; font-size:13px; }
+    .nav img { width:70px; height:70px; }
+  }
+  @media (max-width:500px) {
+    .benefits { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <img src="assets/impress-apparels-logo.png" alt="Impress Apparels logo">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div>
+      <p>✨ WELCOME TO IMPRESS APPARELS</p>
+      <h1>Where Style Meets <span>Confidence.</span></h1>
+      <p>Beautiful, elegant and uniquely designed outfits made to help you look good, feel confident and stand out wherever you go.</p>
+      <a class="btn" href="#shop">Shop Our Collection</a>
+      <a class="btn gold" href="https://wa.me/2348160984071" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    </div>
+    <img class="hero-logo" src="assets/impress-apparels-logo.png" alt="Impress Apparels">
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">💎 Why Shop With Us?</h2>
+  <p class="section-subtitle">We combine quality, comfort, elegance and affordability to help every woman dress beautifully and confidently.</p>
+  <div class="benefits">
+    <div class="benefit">👗<b>Unique Designs</b>Beautiful styles that stand out.</div>
+    <div class="benefit">✨<b>Quality Finishing</b>Attention to detail in every piece.</div>
+    <div class="benefit">💰<b>Affordable</b>Fashion without unnecessary cost.</div>
+    <div class="benefit">📦<b>Easy Ordering</b>Order quickly through WhatsApp.</div>
+  </div>
+</section>
+
+<section id="shop">
+  <h2 class="section-title">🛍️ Featured Collection</h2>
+  <p class="section-subtitle">Shop our featured gowns. All three gowns are ₦25,000 and available in sizes 8, 10, 14 & 16.</p>
+  <div class="products">
+    
+      <article class="product-card">
+        <img src="assets/product-blue-dress.jpg" alt="Blue Short Gown">
+        <div class="product-info">
+          <h3>Blue Short Gown</h3>
+          <p class="price">₦25,000</p>
+          <p>Beautifully selected for women who love elegance, comfort and confidence.</p><p><strong>Available sizes: 8, 10, 14 & 16</strong></p>
+          <a class="btn small" href="https://wa.me/2348160984071?text=Hello%20Impress%20Apparels%2C%20I%20would%20like%20to%20order%20the%20Royal%20Blue%20Statement%20Dress.%20Please%20send%20me%20the%20price%2C%20available%20sizes%20and%20delivery%20details." target="_blank" rel="noopener">Order on WhatsApp</a>
+        </div>
+      </article>
+    
+      <article class="product-card">
+        <img src="assets/product-mustard-maxi.jpg" alt="Lemon Colour Gown">
+        <div class="product-info">
+          <h3>Lemon Colour Gown</h3>
+          <p class="price">₦25,000</p>
+          <p>Beautifully selected for women who love elegance, comfort and confidence.</p><p><strong>Available sizes: 8, 10, 14 & 16</strong></p>
+          <a class="btn small" href="https://wa.me/2348160984071?text=Hello%20Impress%20Apparels%2C%20I%20would%20like%20to%20order%20the%20Mustard%20Embellished%20Maxi%20Dress.%20Please%20send%20me%20the%20price%2C%20available%20sizes%20and%20delivery%20details." target="_blank" rel="noopener">Order on WhatsApp</a>
+        </div>
+      </article>
+    
+      <article class="product-card">
+        <img src="assets/product-white-maxi.jpg" alt="White Turtleneck Gown">
+        <div class="product-info">
+          <h3>White Turtleneck Gown</h3>
+          <p class="price">₦25,000</p>
+          <p>Beautifully selected for women who love elegance, comfort and confidence.</p><p><strong>Available sizes: 8, 10, 14 & 16</strong></p>
+          <a class="btn small" href="https://wa.me/2348160984071?text=Hello%20Impress%20Apparels%2C%20I%20would%20like%20to%20order%20the%20Elegant%20White%20Maxi%20Dress.%20Please%20send%20me%20the%20price%2C%20available%20sizes%20and%20delivery%20details." target="_blank" rel="noopener">Order on WhatsApp</a>
+        </div>
+      </article>
+    
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <h2 class="section-title">❤️ Your Style, Our Passion</h2>
+    <p>At Impress Apparels, we believe every woman deserves to dress beautifully and confidently. Whether you're dressing for church, work, an event, a celebration, or simply upgrading your wardrobe, we have something special for you.</p>
+    <p><strong>👑 Dress to Impress. Always.</strong></p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="section-title">Let's Get You Dressed</h2>
+  <p>Ready to place your order? Send us a WhatsApp message and we'll help you with price, sizes, availability and delivery.</p>
+  <a class="btn" href="https://wa.me/2348160984071" target="_blank" rel="noopener">📞 WhatsApp/Call: +234 816 098 4071</a>
+</section>
+<section id="order"><h2 class="section-title">🛍️ Customer Checkout / Order Form</h2><p class="section-subtitle">Select your product, size and quantity, enter your delivery details, then send the complete order to Impress Apparels on WhatsApp.</p><form id="orderForm" style="max-width:900px;margin:auto;background:#fff;padding:25px;border-radius:18px"><div style="display:grid;grid-template-columns:1fr 1fr;gap:15px"><label>Full Name *<input id="name" required style="width:100%;padding:11px"></label><label>Phone / WhatsApp *<input id="phone" required style="width:100%;padding:11px"></label><label>Email *<input id="email" type="email" required style="width:100%;padding:11px"></label><label>Product *<select id="product" required style="width:100%;padding:11px"><option value="">Choose</option><option value="Blue Short Gown|25000">Blue Short Gown — ₦25,000</option><option value="Lemon Colour Gown|25000">Lemon Colour Gown — ₦25,000</option><option value="White Gown|25000">White Gown — ₦25,000</option></select></label><label>Size *<select id="size" required style="width:100%;padding:11px"><option value="">Choose</option><option>8</option><option>10</option><option>14</option><option>16</option></select></label><label>Quantity *<input id="qty" type="number" min="1" value="1" required style="width:100%;padding:11px"></label><label>State *<select id="state" required style="width:100%;padding:11px"><option value="">Choose</option><option>Oyo</option><option>Lagos</option><option>Ogun</option><option>Osun</option><option>Abuja (FCT)</option><option>Other</option></select></label><label>City *<input id="city" required style="width:100%;padding:11px"></label><label style="grid-column:1/-1">Full Delivery Address *<textarea id="address" required rows="3" style="width:100%;padding:11px"></textarea></label><label style="grid-column:1/-1">Additional Notes<textarea id="notes" rows="2" style="width:100%;padding:11px"></textarea></label><label style="grid-column:1/-1">Preferred Payment Method *<select id="payment" required style="width:100%;padding:11px"><option value="">Choose</option><option>OPay</option><option>Wema Bank</option></select></label></div><div id="summary" style="margin:18px 0;padding:15px;background:#111;color:#fff;border-radius:12px">Subtotal: <b id="sub">₦0</b> &nbsp; | &nbsp; Delivery: <b id="del">Select location</b> &nbsp; | &nbsp; Grand Total: <b id="grand">₦0</b></div><p style="background:#fff3cd;padding:12px;border-radius:10px">🚚 Delivery estimate: ₦3,000–₦5,000 for Ibadan/Oyo, Lagos, Ogun and Osun; ₦5,000–₦7,000 for Abuja and other states. Final delivery fee is confirmed according to exact city/location.</p><label style="display:block;margin:15px 0"><input type="checkbox" required> I confirm my details are correct. Payment is required before processing. Delivery charges are paid by the customer. Delivery takes 8 working days after order placement and payment confirmation.</label><button class="btn" type="submit">🛒 Place Order via WhatsApp</button></form></section>
+<section id="contact"><h2 class="section-title">📞 Contact Impress Apparels</h2><div style="text-align:center"><p>WhatsApp/Phone: <b>+234 816 098 4071</b></p><p>Additional Contact: <b>+234 916 497 2550</b></p><p>Email: <b>impressappreal@gmail.com</b></p><p><a class="btn" target="_blank" href="https://wa.me/2348160984071">CHAT WITH US ON WHATSAPP</a></p><p><a href="https://www.facebook.com/share/18Z9wkS5ag/" target="_blank">Facebook</a> · <a href="https://www.instagram.com/ronke_omoteleola" target="_blank">Instagram</a> · <a href="https://www.tiktok.com/@impressapprealskemsy2" target="_blank">TikTok</a></p></div></section>
+<section><div style="max-width:900px;margin:auto"><h2>💳 Payment Policy</h2><p>Payment must be made before orders are processed. OPay: <b>Omoteleola Ronke Idowu — 8160984071</b>. Wema Bank: <b>Ronke Omoteleola Idowu — 0245030183</b>. After payment, send your receipt and order number to WhatsApp +234 816 098 4071.</p><h2>🚚 Delivery Policy</h2><p>Delivery takes 8 working days after order placement and payment confirmation. Delivery attracts an additional fee. Estimated ₦3,000–₦5,000 for Ibadan/Oyo, Lagos, Ogun and Osun; ₦5,000–₦7,000 for Abuja and other states. Final fee depends on exact location.</p><h2>📜 Terms & Conditions</h2><ol><li>Provide accurate personal and delivery information.</li><li>Customers are responsible for correct product, size and quantity selection.</li><li>Orders are processed after payment confirmation.</li><li>Delivery attracts an additional fee.</li><li>Keep your order number and active phone/WhatsApp.</li><li>Custom requests may require confirmation.</li><li>Customers should inspect orders on delivery and report issues promptly.</li></ol><h2>🔐 Privacy Policy</h2><p>We may collect name, phone/WhatsApp, email, delivery address, state/city, order information and payment confirmation to process orders, arrange delivery and provide customer service. We will not intentionally sell personal information to third parties.</p></div></section></main>
+
+<footer>
+  <strong>IMPRESS APPARELS</strong><br>
+  Elegance. Confidence. Impress.<br>
+  © 2026 Impress Apparels. All rights reserved.
+</footer>
+
+<a class="wa" href="https://wa.me/2348160984071" target="_blank" rel="noopener" aria-label="Chat with Impress Apparels on WhatsApp">☎</a>
+<script>const P=document.getElementById('product'),Q=document.getElementById('qty'),S=document.getElementById('state');function M(n){return '₦'+n.toLocaleString('en-NG')}function R(){return ['Oyo','Lagos','Ogun','Osun'].includes(S.value)?[3000,5000]:['Abuja (FCT)','Other'].includes(S.value)?[5000,7000]:null}function C(){let p=P.value.split('|'),pr=+p[1]||0,q=Math.max(1,+Q.value||1),sub=pr*q,r=R();document.getElementById('sub').textContent=M(sub);document.getElementById('del').textContent=r?M(r[0])+'–'+M(r[1]):'Select location';document.getElementById('grand').textContent=r?M(sub+r[0])+'–'+M(sub+r[1]):M(sub)}P.addEventListener('change',C);Q.addEventListener('input',C);S.addEventListener('change',C);C();document.getElementById('orderForm').addEventListener('submit',e=>{e.preventDefault();let p=P.value.split('|'),pr=+p[1],q=Math.max(1,+Q.value),sub=pr*q,r=R(),no='IMP-'+Date.now().toString().slice(-8);let msg=`NEW IMPRESS APPARELS ORDER\nOrder Number: ${no}\n\nCustomer: ${name.value}\nPhone/WhatsApp: ${phone.value}\nEmail: ${email.value}\nProduct: ${p[0]}\nUnit Price: ${M(pr)}\nSize: ${size.value}\nQuantity: ${q}\nSubtotal: ${M(sub)}\nState: ${S.value}\nCity: ${city.value}\nDelivery Address: ${address.value}\nEstimated Delivery Fee: ${r?M(r[0])+'–'+M(r[1]):'To be confirmed'}\nEstimated Grand Total: ${r?M(sub+r[0])+'–'+M(sub+r[1]):M(sub)}\nPayment Method: ${payment.value}\nNotes: ${notes.value||'None'}\n\nPayment is required before processing. Delivery is 8 working days after order placement and payment confirmation.\nPlease confirm the exact delivery fee and payment amount.`;window.open('https://wa.me/2348160984071?text='+encodeURIComponent(msg),'_blank')});</script></body>
+</html>
